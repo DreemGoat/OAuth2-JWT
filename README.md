@@ -1,1 +1,4 @@
 # OAuth2-JWT
+
+secret: bGFOMHKRTmuCSFSm6709uZayneYrymZJ/igJ4+vkivw=
+JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFhYSIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjozMH0.zseZ67QXI5NTubi__x6Fp7B4lThYZ2zqI_cY_CNLnnI
