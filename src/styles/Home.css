@@ -1,0 +1,346 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* * {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+} */
+
+/* body {
+    margin: 0;
+
+} */
+
+/* Navigation bar */
+.homenav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFEBE0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.homenav a {
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+    margin-left: 70px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+
+.homenav a:hover {
+    color: #917d71;
+}
+
+.homenav a:last-child {
+    margin-right: 30px;
+    margin-left: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #443226;
+}
+
+section {
+    font-size: 2rem;
+    display: grid;
+    height: 40rem;
+    width: 100%;
+    padding-top: 90px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+#home {
+    background: #FFEBE0;
+}
+
+.logonamehome {
+    float: left;
+    padding-top: 15px;
+    max-height: 510px;
+}
+
+.homecaption {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+.homecaption1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    margin-right: 20px;
+    color: #443226;
+}
+
+.homecaption2 {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+    padding-top: 5px;
+}
+
+.downloadbutton {
+    margin: 0 auto;
+    padding-top: 40px; 
+    display: block;
+}
+
+.appstore-container, .googleplay-container {
+    padding: 20px;
+    display: block;
+    height: 100px;
+    width: 320px;
+    margin: 0 10px;
+    filter: drop-shadow(0px 0px 10px rgba(70, 27, 19, 0.219));
+}
+
+.appstore, .googleplay {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#about {
+    background: linear-gradient(#FFEBE0, #FFF9F4, #FFF9F4 95%);
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+    text-align: center;
+    height: 32rem;
+    font-size: 25px;
+}
+
+.title{
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: #443226;
+}
+
+.aboutapp {
+    font-family: 'Glory', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #CC3300;
+    position: relative;
+    top: -35px;
+}
+
+.aboutcaption {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    top: -45px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+.founders {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #443226;
+}
+
+.foundersname {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+.name {
+    padding: 0px 70px 30px 70px;
+    margin-left: -50px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+  
+#features {
+    background: linear-gradient(#FFE7D1 40%, #FFF2EC);
+    place-items: center;
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+.feature1-container, .feature2-container, .feature3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature1-container, .feature3-container{
+    margin-top: -35px;
+}
+.feature2-container {
+    margin-top: 25px;
+}
+
+.feature {
+    display: flex;
+    gap: 50px;
+}
+
+.num {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #4E412F;
+    color: #FFE7D1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featuredesc {
+    padding: 10px 0px;
+    max-width: 320px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+.phone1, .phone3, .phone2 {
+    width: 160px;
+    filter: drop-shadow(0px 0px 10px rgba(137, 88, 32, 0.511));
+}
+.phone2 {
+    width:380px;
+}
+
+#community {
+    background: #FFF3EC;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 32rem;
+}
+
+.com-container {
+    margin: 10px 40px;
+}
+
+.comcaption {
+    font-family: 'Hepta Slab', serif;
+    font-size: 45px;
+    color: #443226;
+    padding-top: 29px;
+    max-width: 650px;
+    letter-spacing:2px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.comcaption2 {
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #443226;
+}
+
+.comcap {
+    font-family: 'Hepta Slab', serif;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing:2px;
+    line-height: 1.4;
+    color: #443226;
+}
+
+.buttonhome {
+    background-color: #FD8EA2;
+    font-family: 'Poppins', sans-serif;
+    color: #FFFAF5;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 78px;
+    font-size: 20px;
+    font-weight: bold;    
+    position: relative;
+    top: -170px;
+    box-shadow: 0 0 5px rgba(103, 72, 72, 0.311);
+}
+
+.buttonhome:hover {
+    cursor: pointer;
+}  
+  
+.featureicon {
+    width: 275px;
+    position: relative;
+    top: -80px;
+    left: 260px;
+}
+
+.postexample {
+    width: 350px;
+    height: auto;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: 52px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(177, 89, 89, 0.126);
+}
+
+#contact {
+    background: #4E412F;
+    height: 16rem;
+}
+
+.contact-container {
+    margin-top: -10px;
+    margin-left: 105px;
+}
+
+.contacttitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    color: #FFE7D0;
+}
+
+.email-container, .phone-container {
+    display: flex;
+    padding-top: 40px;
+}
+
+.contacticon-container {
+    height: 34px;
+    width: 40px;
+    padding-right: 28px;
+}
+
+.contactinfo {
+    font-family: 'Hepta Slab', serif;
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 500;
+}

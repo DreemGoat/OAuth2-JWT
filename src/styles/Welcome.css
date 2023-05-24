@@ -1,0 +1,71 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap');
+
+.welcomeBody {
+    padding-top: 110px;
+    text-align: center;
+}
+
+.messagewelcome1 {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+.messagewelcome3{
+    padding-top: 50px;
+}
+
+.messagewelcome1, .logonamewelcome {
+    display: inline-block;
+}
+
+.logonamewelcome {
+    max-width: 250px;
+}
+
+.messagewelcome1, .messagewelcome3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 61px;
+    font-weight: 900;
+    color: #443226;
+    letter-spacing: 2px;
+    padding-right: 20px;
+}
+
+.messagewelcome2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 43px;
+    font-weight: 300;
+    color: #443226;
+}
+
+.buttonwelcome{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    border: 2px solid #4E412F1A;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 16px;
+    background-color: #4E412F;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #FFFAF5;
+    width: 195px;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonwelcome:hover {
+    cursor: pointer;
+}  
+
+.dogslogo {
+    z-index: -10;
+    max-width: 400px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

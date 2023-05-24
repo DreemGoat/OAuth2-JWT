@@ -1,0 +1,309 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* * {
+    color: #4E412F;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+} */
+
+.detailbody {
+    background: #FFDEDE;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FEEAEA;
+    box-shadow: 0 16px 40px 0 rgba(112, 38, 62, 0.25);
+    border-radius: 20px;
+    width: calc(100% - 200px);
+    height: calc(100% - 120px);
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+}
+
+.info-container, .info-container2 {
+    margin-top: 15px;
+    width: 330px;
+}
+
+.ownername, .birth, .gender, .country, .city, .dogname, .breed, .age {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: #4E412F;
+}
+
+input[type="text"], input[type="date"] {
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #FFFAF5;
+    box-shadow: 0 2px 8px rgba(82, 46, 34, 0.087);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #4E412F;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    outline: none;
+}
+
+input[type="date"] {
+    content: attr(placeholder);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: #A6968C;
+
+}
+
+input[type="text"]::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: #A6968C;
+}
+
+.pic {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.back {
+    max-width: 50px;
+}
+
+.logonamedetails {
+    max-width: 150px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+}
+
+.numactive, .numinactive {
+    font-size: 20px;
+    font-weight: 400;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4E412F;
+    color: #FFE7D1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 15px;
+    
+}
+
+.numinactive {
+    background-color: rgba(78, 65, 47, 0.5);
+}
+
+.titleinactive {
+    color: rgba(78, 65, 47, 0.5);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.titleactive, .titleinactive {
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    color: #4E412F;
+}
+
+.steps {
+    margin-top: 30px;
+}
+
+.step-container {
+    display: flex;
+    align-items: center;
+    padding: 23px 0px;
+}
+
+.line{
+    border-left: 3px solid #443226;
+    height: 100%;
+}
+
+.gender-box, .pgender-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    height: 30px;
+    background-color: #FEEAEA;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(82, 46, 34, 0.135);
+}
+
+.pgender-box {
+    width: 60%;
+}
+
+.gender-box label, .pgender-box label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 100%;
+    color: #4E412F;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    cursor: pointer;
+    position: relative;
+}
+
+.gender-box input[type="radio"], .pgender-box input[type="radio"] {
+    display: none;
+}
+
+.gender-box input[type="radio"]:checked + span, .pgender-box input[type="radio"]:checked + span {
+    background-color: #4E412F;
+    color: #FFE7D1;
+    opacity: 1;
+}
+
+.gender-box span, .pgender-box span {
+    width: 30px;
+    height: 0px;
+    border-radius: 10px;
+    background-color: #FEEAEA;
+    color: #4E412F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.5;
+    padding: 20px 26px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.gender-box span:hover, .pgender-box span {
+    opacity: 1;
+}
+
+.gender-box label:not(:last-child)::after, .pgender-box label:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    height: 80%;
+    border-left: 1px solid #4e412f73;
+}
+
+.picture, .dpicture {
+    display: flex;
+    align-items: center;
+    margin-top: 41px;
+}
+
+.dpicture {
+    margin-top: 22px;
+}
+
+.pic {
+    border-radius: 50%;
+    background-color: #FEA8A8;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(82, 46, 34, 0.135);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.upload {
+    color: #4E412F;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    color: rgba(78, 65, 47, 0.5);
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+.camera {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+.message1 {
+    color: #4E412F;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-top: 45px;
+    max-width: 300px;
+    font-size: 27px;
+    line-height: 1.5;
+}
+
+.message2 {
+    color: #4E412F;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#bio {
+    padding-left: 23px;
+    font-size: 21px;
+    height: 200px;
+    width: 715px;
+}
+
+.info {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #A6968C;
+    padding-top: 10px;
+}
+
+.buttondetails {
+    border: 2px solid #4E412F1A;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4E412F;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    box-sizing: border-box;
+    color: #FFFAF5;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 35px;
+    right: 0;
+    margin-right: 80px;
+}
+
+.buttondetails:hover, .pic:hover {
+    cursor: pointer;
+}
