@@ -16,7 +16,7 @@ function Dashboard() {
             <a className="inactive" href="chat">Chat</a>
             <a className="inactive" href="explore">Explore</a>          
           </div>
-          <a href="index.html">
+          <a href="/">
             <button className="logout">Log Out</button>
           </a>
         </div>
