@@ -19,7 +19,7 @@ function Login() {
           <input type="email" id="email" name="email" placeholder="Enter your email address" />
           <div className="pass">Password</div>
           <input type="password" id="password" name="password" placeholder="Enter your password" />
-          <a href="match"><button className="buttonsignup">Log in</button></a>
+          <a href="dashboard"><button className="buttonsignup">Log in</button></a>
           <p className="signmessage">Don’t have an account yet? <a href="signup" className="bold-italic">Sign up</a> now!</p>
         </div>
       </div>
