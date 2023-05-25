@@ -20,6 +20,7 @@ function Login() {
           <div className="pass">Password</div>
           <input type="password" id="password" name="password" placeholder="Enter your password" />
           <a href="dashboard"><button className="buttonsignup">Log in</button></a>
+          <a href="dashboard"><button className="buttonoauth">Log in with OAuth2</button></a>
           <p className="signmessage">Don’t have an account yet? <a href="signup" className="bold-italic">Sign up</a> now!</p>
         </div>
       </div>
