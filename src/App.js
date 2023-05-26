@@ -16,6 +16,7 @@ import Home from "./components/Home";
 import Chat from "./components/Chat";
 import Explore from "./components/Explore"
 import Dashboard from "./components/Dashboard";
+import OAuthPopup from "./components/OAuth2Popup"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -26,6 +27,7 @@ function App() {
     <div className="app">
       <Router>
         <Routes>
+          <Route element = {<OAuthPopup />} path = "/callback" />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<SignUp />} /> 
