@@ -3,9 +3,29 @@ from typing import Annotated, Union
 
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi.middleware.cors import CORSMiddleware
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
+
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from requests import Session
+
+app = FastAPI()
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+origins = ["http://localhost:3000"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
@@ -28,6 +48,7 @@ fake_users_db = {
     },
 }
 
+
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -43,13 +64,6 @@ class User(BaseModel):
 
 class UserInDB(User):
     hashed_password: str
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-app = FastAPI()
-
 
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
@@ -147,12 +161,39 @@ async def login_for_access_token(
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
-@app.get("/users/me")
-async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
-    return current_user
+# @app.get("/users/me")
+# async def read_users_me(current_user: Annotated[User, Depends(get_current_user)]):
+#     return current_user
 
-@app.get("/users/me/items/")
-async def read_own_items(
-    current_user: Annotated[User, Depends(get_current_active_user)]
-):
-    return [{"item_id": "Foo", "owner": current_user.username}]
+# @app.get("/users/me/items/")
+# async def read_own_items(
+#     current_user: Annotated[User, Depends(get_current_active_user)]
+# ):
+#     return [{"item_id": "Foo", "owner": current_user.username}]
+
+# "username": "johndoe",
+#         "full_name": "John Doe",
+#         "email": "johndoe@example.com",
+#         "hashed_password": "fakehashedsecret"
+
+@app.get("/")
+def index():
+    return {"user": len(fake_users_db)}
+
+@app.get("/user")
+def get_todos(db: Session = Depends(db)):
+    return db.query(models.Todo).all()
+
+@app.post("/newUser")
+def post_user(todo: fake_users_db, db: Session = Depends(get_db)):
+    if Todo.name in todos:
+        return {"error": "student ID is EXIST"}
+    todo_model = models.Todo()
+    todo_model.title = todo.title
+    todo_model.description = todo.description
+    todo_model.created = todo.created
+
+    db.add(todo_model)
+    db.commit()
+    
+    return todo
