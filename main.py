@@ -181,19 +181,18 @@ def index():
     return {"user": len(fake_users_db)}
 
 @app.get("/user")
-def get_todos(db: Session = Depends(db)):
-    return db.query(models.Todo).all()
+def get_fake_users_db(db: Session = Depends(db)):
+    return db.query(fake_users_db).all()
 
 @app.post("/newUser")
-def post_user(todo: fake_users_db, db: Session = Depends(get_db)):
-    if Todo.name in todos:
+def post_user(User: fake_users_db, db: Session = Depends(db)):
+    if fake_users_db.name in fake_users_db:
         return {"error": "student ID is EXIST"}
-    todo_model = models.Todo()
-    todo_model.title = todo.title
-    todo_model.description = todo.description
-    todo_model.created = todo.created
+    fake_users_db.title = User.title
+    fake_users_db.description = User.description
+    fake_users_db.created = User.created
 
-    db.add(todo_model)
+    db.add(fake_users_db)
     db.commit()
     
-    return todo
+    return User
